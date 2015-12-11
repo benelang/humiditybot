@@ -140,10 +140,10 @@ return [
         /*
          * Application Service Providers...
          */
-        humiditybot\Providers\AppServiceProvider::class,
-        humiditybot\Providers\AuthServiceProvider::class,
-        humiditybot\Providers\EventServiceProvider::class,
-        humiditybot\Providers\RouteServiceProvider::class,
+        Humiditybot\Providers\AppServiceProvider::class,
+        Humiditybot\Providers\AuthServiceProvider::class,
+        Humiditybot\Providers\EventServiceProvider::class,
+        Humiditybot\Providers\RouteServiceProvider::class,
 
         /*
          * Third party Service Providers

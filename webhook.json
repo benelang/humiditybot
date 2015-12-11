@@ -1,0 +1,6 @@
+{
+    "eventName": "newValues",
+    "url": "http://humiditybot.com/api/values/create",
+    "requestType": "POST",
+    "mydevices": true
+}

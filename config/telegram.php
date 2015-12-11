@@ -57,5 +57,6 @@ return [
     */
     'commands' => [
         Telegram\Bot\Commands\HelpCommand::class,
+        Humiditybot\Classes\Telegram\Commands\StartCommand::class
     ],
 ];

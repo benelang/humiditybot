@@ -1,6 +1,6 @@
 <?php
 
-namespace humiditybot\Http\Controllers;
+namespace Humiditybot\Http\Controllers;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;

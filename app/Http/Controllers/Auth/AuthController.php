@@ -1,10 +1,10 @@
 <?php
 
-namespace humiditybot\Http\Controllers\Auth;
+namespace Humiditybot\Http\Controllers\Auth;
 
-use humiditybot\User;
+use Humiditybot\User;
 use Validator;
-use humiditybot\Http\Controllers\Controller;
+use Humiditybot\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 

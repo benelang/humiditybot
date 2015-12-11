@@ -1,6 +1,6 @@
 <?php
 
-namespace humiditybot\Jobs;
+namespace Humiditybot\Jobs;
 
 use Illuminate\Bus\Queueable;
 

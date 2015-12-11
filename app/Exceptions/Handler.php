@@ -1,6 +1,6 @@
 <?php
 
-namespace humiditybot\Exceptions;
+namespace Humiditybot\Exceptions;
 
 use Exception;
 use Illuminate\Database\Eloquent\ModelNotFoundException;

@@ -1,6 +1,6 @@
 <?php
 
-namespace humiditybot\Providers;
+namespace Humiditybot\Providers;
 
 use Illuminate\Contracts\Auth\Access\Gate as GateContract;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
@@ -13,7 +13,7 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        'humiditybot\Model' => 'humiditybot\Policies\ModelPolicy',
+        'Humiditybot\Model' => 'Humiditybot\Policies\ModelPolicy',
     ];
 
     /**

@@ -30,7 +30,7 @@ return [
     ],
 
     'stripe' => [
-        'model'  => humiditybot\User::class,
+        'model'  => Humiditybot\User::class,
         'key'    => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],

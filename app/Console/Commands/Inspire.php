@@ -1,6 +1,6 @@
 <?php
 
-namespace humiditybot\Console\Commands;
+namespace Humiditybot\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Foundation\Inspiring;

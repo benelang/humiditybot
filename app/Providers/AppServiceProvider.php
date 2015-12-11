@@ -1,6 +1,6 @@
 <?php
 
-namespace humiditybot\Providers;
+namespace Humiditybot\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

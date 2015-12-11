@@ -11,7 +11,7 @@
 |
 */
 
-$factory->define(humiditybot\User::class, function (Faker\Generator $faker) {
+$factory->define(Humiditybot\User::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
         'email' => $faker->email,

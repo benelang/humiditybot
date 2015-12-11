@@ -1,6 +1,6 @@
 <?php
 
-namespace humiditybot;
+namespace Humiditybot;
 
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
@@ -38,6 +38,6 @@ class User extends Model implements AuthenticatableContract,
     protected $hidden = ['password', 'remember_token'];
 
     public function devices(){
-      return $this->hasMany('humiditybot\Device');
+      return $this->hasMany('Humiditybot\Device');
     }
 }

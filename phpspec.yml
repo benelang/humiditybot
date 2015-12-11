@@ -1,5 +1,5 @@
 suites:
     main:
-        namespace: humiditybot
-        psr4_prefix: humiditybot
+        namespace: Humiditybot
+        psr4_prefix: Humiditybot
         src_path: app

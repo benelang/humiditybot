@@ -1,11 +1,10 @@
 <?php
 
-namespace humiditybot\Http\Controllers;
+namespace Humiditybot\Http\Controllers;
 
 use Illuminate\Http\Request;
-
-use humiditybot\Http\Requests;
-use humiditybot\Http\Controllers\Controller;
+use Humiditybot\Http\Requests;
+use Humiditybot\Http\Controllers\Controller;
 
 class LoginController extends Controller
 {

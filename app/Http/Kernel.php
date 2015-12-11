@@ -1,6 +1,6 @@
 <?php
 
-namespace humiditybot\Http;
+namespace Humiditybot\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
@@ -13,11 +13,11 @@ class Kernel extends HttpKernel
      */
     protected $middleware = [
         \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
-        \humiditybot\Http\Middleware\EncryptCookies::class,
+        \Humiditybot\Http\Middleware\EncryptCookies::class,
         \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
         \Illuminate\Session\Middleware\StartSession::class,
         \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-        \humiditybot\Http\Middleware\VerifyCsrfToken::class,
+        \Humiditybot\Http\Middleware\VerifyCsrfToken::class,
     ];
 
     /**
@@ -26,8 +26,8 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $routeMiddleware = [
-        'auth' => \humiditybot\Http\Middleware\Authenticate::class,
+        'auth' => \Humiditybot\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
-        'guest' => \humiditybot\Http\Middleware\RedirectIfAuthenticated::class,
+        'guest' => \Humiditybot\Http\Middleware\RedirectIfAuthenticated::class,
     ];
 }

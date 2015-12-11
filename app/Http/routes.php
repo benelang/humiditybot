@@ -11,11 +11,27 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+/*
+Route::get('/', array(
+  'as' => 'test',
+  'uses' => 'Humiditybot\TelegramController@test'
+));
+
+*/
+Route::get('/', function(){
+  return View::make('humiditybot.start');
 });
 
+
 Route::get('login', array(
-  "as" => "login",
-  "uses" => "humiditybot\LoginController.php@showLogin"
+  'as'=> 'webapp_login',
+  'uses' => 'LoginController@showLogin'
 ));
+
+
+Route::group(array('prefix' => 'api'), function(){
+  Route::post('/values/create', array(
+    'as' => 'api_values_create',
+    'uses' => 'ParticleController@createValues'
+  ));
+});

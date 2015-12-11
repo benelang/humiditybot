@@ -1,6 +1,6 @@
 <?php
 
-namespace humiditybot\Http\Requests;
+namespace Humiditybot\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace humiditybot\Http\Middleware;
+namespace Humiditybot\Http\Middleware;
 
 use Closure;
 use Illuminate\Contracts\Auth\Guard;

@@ -1,6 +1,6 @@
 <?php
 
-namespace humiditybot\Events;
+namespace Humiditybot\Events;
 
 abstract class Event
 {

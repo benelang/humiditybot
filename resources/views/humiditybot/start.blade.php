@@ -1,0 +1,1 @@
+@extends('humiditybot.layout')

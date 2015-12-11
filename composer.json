@@ -1,5 +1,5 @@
 {
-    "name": "benelang/humiditybot",
+    "name": "benelang/Humiditybot",
     "description": "A bot to prevent your home from mold",
     "keywords": ["framework", "laravel"],
     "license": "MIT",
@@ -21,7 +21,7 @@
             "database"
         ],
         "psr-4": {
-            "humiditybot\\": "app/"
+            "Humiditybot\\": "app/"
         }
     },
     "autoload-dev": {

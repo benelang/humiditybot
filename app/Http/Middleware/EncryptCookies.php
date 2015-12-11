@@ -1,6 +1,6 @@
 <?php
 
-namespace humiditybot\Http\Middleware;
+namespace Humiditybot\Http\Middleware;
 
 use Illuminate\Cookie\Middleware\EncryptCookies as BaseEncrypter;
 

@@ -28,7 +28,7 @@ return [
     |
     */
 
-    'model' => humiditybot\User::class,
+    'model' => Humiditybot\User::class,
 
     /*
     |--------------------------------------------------------------------------

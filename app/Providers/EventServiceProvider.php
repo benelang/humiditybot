@@ -1,6 +1,6 @@
 <?php
 
-namespace humiditybot\Providers;
+namespace Humiditybot\Providers;
 
 use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -13,8 +13,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'humiditybot\Events\SomeEvent' => [
-            'humiditybot\Listeners\EventListener',
+        'Humiditybot\Events\SomeEvent' => [
+            'Humiditybot\Listeners\EventListener',
         ],
     ];
 

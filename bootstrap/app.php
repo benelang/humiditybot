@@ -28,17 +28,17 @@ $app = new Illuminate\Foundation\Application(
 
 $app->singleton(
     Illuminate\Contracts\Http\Kernel::class,
-    humiditybot\Http\Kernel::class
+    Humiditybot\Http\Kernel::class
 );
 
 $app->singleton(
     Illuminate\Contracts\Console\Kernel::class,
-    humiditybot\Console\Kernel::class
+    Humiditybot\Console\Kernel::class
 );
 
 $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
-    humiditybot\Exceptions\Handler::class
+    Humiditybot\Exceptions\Handler::class
 );
 
 /*

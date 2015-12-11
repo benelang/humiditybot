@@ -1,8 +1,8 @@
 <?php
 
-namespace humiditybot\Http\Controllers\Auth;
+namespace Humiditybot\Http\Controllers\Auth;
 
-use humiditybot\Http\Controllers\Controller;
+use Humiditybot\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 
 class PasswordController extends Controller
