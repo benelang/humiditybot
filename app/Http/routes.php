@@ -23,6 +23,13 @@ Route::get('/', function(){
 });
 
 
+
+Route::post('/updates/{token}', array(
+  'as' => 'telegram_updates_get',
+  'uses' => 'TelegramController@getUpdates'
+));
+
+
 Route::get('login', array(
   'as'=> 'webapp_login',
   'uses' => 'LoginController@showLogin'
@@ -30,8 +37,15 @@ Route::get('login', array(
 
 
 Route::group(array('prefix' => 'api'), function(){
+
   Route::post('/values/create', array(
     'as' => 'api_values_create',
     'uses' => 'ParticleController@createValues'
   ));
+
+  Route::post('/127332203:AAFaKvyjmyxJ-WqQKaCNudBBaxd2PZK39QA/webhook', function () {
+      Telegram::commandsHandler(true);
+
+      return 'ok';
+  });
 });

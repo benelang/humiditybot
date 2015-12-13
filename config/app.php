@@ -137,6 +137,8 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
+        Illuminate\Html\HtmlServiceProvider::class,
+
         /*
          * Application Service Providers...
          */
@@ -150,7 +152,7 @@ return [
          */
         Telegram\Bot\Laravel\TelegramServiceProvider::class,
         Cartalyst\Sentinel\Laravel\SentinelServiceProvider::class,
-
+        AdamWathan\BootForms\BootFormsServiceProvider::class
 
     ],
 
@@ -201,13 +203,16 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
 
+
+        'Form'=> Illuminate\Html\FormFacade::class,
+        'HTML'=> Illuminate\Html\HtmlFacade::class,
         'Telegram'  => Telegram\Bot\Laravel\Facades\Telegram::class,
 
         'Activation' => Cartalyst\Sentinel\Laravel\Facades\Activation::class,
         'Reminder'   => Cartalyst\Sentinel\Laravel\Facades\Reminder::class,
         'Sentinel'   => Cartalyst\Sentinel\Laravel\Facades\Sentinel::class,
 
-
+        'BootForm' => AdamWathan\BootForms\Facades\BootForm::class
     ],
 
 ];

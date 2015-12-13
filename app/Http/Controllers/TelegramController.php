@@ -11,10 +11,16 @@ use Illuminate\Support\Facades\Response;
 
 class TelegramController extends Controller
 {
-  public function test(){
+  public function getUpdates()
+  {
       $updates = Telegram::getUpdates();
 
       // Telegram::sendMessage('24560074', 'Ich lebe');
       return Response::json($updates);
+  }
+
+  public function sendWarning($chat, )
+  {
+
   }
 }
