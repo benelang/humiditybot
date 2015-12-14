@@ -18,9 +18,4 @@ class TelegramController extends Controller
       // Telegram::sendMessage('24560074', 'Ich lebe');
       return Response::json($updates);
   }
-
-  public function sendWarning($chat, )
-  {
-
-  }
 }
