@@ -16,7 +16,7 @@ class ParticleController extends Controller
 {
     /**
      * stores Values that are sent using a partile webhook
-     * @return Resonse - A Laravel Response Object
+     * @return Response - A Laravel Response Object
      */
     public function createValues(){
       // $time = time(Input::get('published_at'));
