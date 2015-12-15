@@ -26,7 +26,7 @@ class StartCommand extends Command
         // the user/chat id who triggered this command.
         // `replyWith<Message|Photo|Audio|Video|Voice|Document|Sticker|Location|ChatAction>()` all the available methods are dynamically
         // handled when you replace `send<Method>` with `replyWith` and use all their parameters except chat_id.
-        $this->replyWithMessage('Viele Grüße vom Humiditybot. Du hast jetzt die folgenden Möglichkeiten:');
+        $this->replyWithMessage('Willkommen zurück! Sag mir, was ich für dich tun kann:');
 
         // This will update the chat status to typing...
         $this->replyWithChatAction(Actions::TYPING);
