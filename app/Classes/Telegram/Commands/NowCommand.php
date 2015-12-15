@@ -53,7 +53,8 @@ class NowCommand extends Command
           $response .= "Für " . $device->description . " wurden folgende Messwerte gefunden:" . PHP_EOL;
           $response .= "Luftfeuchtigkeit: " . $values[0]->humidity . "% " . $trendHumidityCode . PHP_EOL;
           $response .= "Temparatur: " . $values[0]->temparature . "°C " . $trendTemparatureCode . PHP_EOL;
-          $time = strtotime($values[0]->time);
+          date_default_timezone_set('Europe/Berlin');
+          $time = strtotime($values[0]->time. ' UTC');
           $response .= "Gemessen am " . date('d.m.Y', $time) . ", um " . date('H:i:s', $time) . PHP_EOL;
         }
 
