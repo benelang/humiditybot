@@ -2,6 +2,7 @@
 
 namespace Humiditybot\Classes\Telegram\Commands;
 
+use Carbon\Carbon;
 use Humiditybot\User;
 use Humiditybot\Values;
 use Telegram\Bot\Actions;
@@ -28,16 +29,32 @@ class NowCommand extends Command
         $update = $this->getUpdate();
         $from = $update->getMessage()->getFrom()->getId();
         $user = User::where('chat_id', '=', $from)->first();
-        echo $user->first_name;
         $devices = $user->devices;
-        var_dump($devices);
 
         $response = "Aktuelle Messwerte:" . PHP_EOL;
         foreach ($devices as $device) {
-          $values = Values::where('device_id', '=', $device->id)->orderBy('id', 'DESC')->first();
+          $values = Values::where('device_id', '=', $device->id)->orderBy('id', 'DESC')->take(2)->get();
+          if ($values[0]->humidity > $values[1]->humidty) {
+            $trendHumidityCode = "\xE2\xAC\x86"; //going up
+          } if ($values[0]->humidity == $values[1]->humidity){
+            $trendHumidityCode = "\xE2\x9E\xA1"; //staying the same
+          } if ($values[0]->humidity < $values[1]->humidity){
+            $trendHumidityCode = "\xE2\xAC\x87"; //going down
+          }
+
+          if ($values[0]->temparature > $values[1]->temparature) {
+            $trendTemparatureCode = "\xE2\xAC\x86"; //going up
+          } if ($values[0]->temparature == $values[1]->temparature){
+            $trendTemparatureCode = "\xE2\x9E\xA1"; //staying the same
+          } if ($values[0]->temparature < $values[1]->temparature){
+            $trendTemparatureCode = "\xE2\xAC\x87"; //going down
+          }
+
           $response .= "Für " . $device->description . " wurden folgende Messwerte gefunden:" . PHP_EOL;
-          $response .= "Luftfeuchtigkeit: " . $values->humidity . "%" . PHP_EOL;
-          $response .= "Temparatur: " . $values->temparature . "°C";
+          $response .= "Luftfeuchtigkeit: " . $values[0]->humidity . "% " . $trendHumidityCode . PHP_EOL;
+          $response .= "Temparatur: " . $values[0]->temparature . "°C " . $trendTemparatureCode . PHP_EOL;
+          $time = strtotime($values[0]->time);
+          $response .= "Gemessen am " . date('d.m.Y', $time) . ", um " . date('H:i:s', $time) . PHP_EOL;
         }
 
         $this->replyWithMessage($response);
