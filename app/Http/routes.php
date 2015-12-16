@@ -44,8 +44,9 @@ Route::group(array('prefix' => 'api'), function(){
   ));
 
   Route::post('/127332203:AAFaKvyjmyxJ-WqQKaCNudBBaxd2PZK39QA/webhook', function () {
-      Telegram::commandsHandler(true);
+    Log::info('Received update', ['update' => Input::all()]);
+    Telegram::commandsHandler(true);
 
-      return 'ok';
+    return 'ok';
   });
 });
