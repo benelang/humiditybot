@@ -33,6 +33,6 @@ class HelpCommand extends Command
             $response .= sprintf('/%s - %s'.PHP_EOL, $name, $handler->getDescription());
         }
 
-        $this->replyWithMessage($response);
+        $this->replyWithMessage(['text' => $response]);
     }
 }

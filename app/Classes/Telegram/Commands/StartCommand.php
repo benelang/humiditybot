@@ -26,10 +26,10 @@ class StartCommand extends Command
         // the user/chat id who triggered this command.
         // `replyWith<Message|Photo|Audio|Video|Voice|Document|Sticker|Location|ChatAction>()` all the available methods are dynamically
         // handled when you replace `send<Method>` with `replyWith` and use all their parameters except chat_id.
-        $this->replyWithMessage('Willkommen zurück! Sag mir, was ich für dich tun kann:');
+        $this->replyWithMessage(['text' =>'Willkommen zurück! Sag mir, was ich für dich tun kann:']);
 
         // This will update the chat status to typing...
-        $this->replyWithChatAction(Actions::TYPING);
+        $this->replyWithChatAction(['action' => Actions::TYPING]);
 
         // This will prepare a list of available commands and send the user.
         // First, Get an array of all registered commands
@@ -43,7 +43,7 @@ class StartCommand extends Command
         }
 
         // Reply with the commands list
-        $this->replyWithMessage($response);
+        $this->replyWithMessage(['text' => $response]);
 
         // Trigger another command dynamically from within this command
         // When you want to chain multiple commands within one or process the request further.
