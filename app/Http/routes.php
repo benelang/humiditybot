@@ -43,6 +43,11 @@ Route::group(array('prefix' => 'api'), function(){
     'uses' => 'ParticleController@createValues'
   ));
 
+  Route::get('/values/create', array(
+    'as' => 'api_values_create',
+    'uses' => 'ParticleController@createValues'
+  ));
+
   Route::post('/127332203:AAFaKvyjmyxJ-WqQKaCNudBBaxd2PZK39QA/webhook', function () {
     Log::info('Received update', ['update' => Input::all()]);
     Telegram::commandsHandler(true);
